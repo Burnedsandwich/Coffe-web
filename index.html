@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World's Best Coffee - Vishwabucks</title>
+    <audio id="background-audio" controls autoplay>
+    <source src="vibin.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+    </audio>
+
+    <style>
+        body {
+            background-color: #f4f1ea;
+            font-family: Arial, sans-serif;
+            color: #4b3832;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #725924;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 80%;
+            max-width: 1000px;
+            height: auto;
+        }
+        h1 {
+            color: #ffffff;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #725924;
+            border-bottom: 2px solid #725924;
+            padding-bottom: 5px;
+        }
+        p, ul, blockquote {
+            color: #4b3832;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #e0d8c3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        blockquote {
+            background-color: #e0d8c3;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #725924;
+        }
+        a {
+            color: #725924;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #725924;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #coffee-image {
+            display: none;
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://imgflip.com/memegenerator" target="_blank">
+            <img src="coffee_logo.webp" alt="Vishwabucks logo">
+        </a>
+        <h1>Welcome to Vishwabucks!</h1>
+    </header>
+    <main>
+        <p><span style="background-color:white;">Enjoy the world's best coffee.</span></p>
+        <h2>About Us</h2>
+        <p>Vishwabucks is dedicated to providing the finest coffee experience. Our beans are sourced from the best farms around the world, ensuring every cup is a delight.</p>
+        <h2>Our Menu</h2>
+        <ul>
+            <li data-image="Expresso.jpeg">Espresso</li>
+            <li data-image="latte.jpeg">Latte</li>
+            <li data-image="cappuccino.jpeg">Cappuccino</li>
+            <li data-image="mocha.jpeg">Mocha</li>
+            <li data-image="coldbrew.jpeg">Cold Brew</li>
+        </ul>
+        <img id="coffee-image" src="" alt="Coffee Image">
+        <h2>Customer Testimonials</h2>
+        <blockquote>"Zoinks! This coffee is like, totally groovy! - Shaggy Rogers"</blockquote>
+        <blockquote>"I tawt I taw a coffee cup! I did, I did! And it's delicious! - Tweety Bird"</blockquote>
+        <blockquote>"Great coffee, doc! Keeps me hoppin' all day long! - Bugs Bunny"</blockquote>
+        <blockquote>"Yabba Dabba Doo! This coffee rocks! - Fred Flintstone"</blockquote>
+        <blockquote>"Cowabunga! This coffee is radical! - Michelangelo (Teenage Mutant Ninja Turtles)"</blockquote>
+        <a href="https://imgflip.com/memegenerator" target="_blank">Buy one get one free!</a>
+        <h2>Contact Us</h2>
+        <p>Email: contact@vishwabucks.com<br>Phone: +123-456-7890</p>
+        <h2>Follow Us</h2>
+        <a href="https://facebook.com/vishwabucks" target="_blank">Facebook</a><br>
+        <a href="https://twitter.com/vishwabucks" target="_blank">Twitter</a><br>
+        <a href="https://instagram.com/vishwabucks" target="_blank">Instagram</a>
+    </main>
+    <footer>
+        &copy; 2045 Vishwabucks. All rights reserved.If copied will be slayed
+    </footer>
+    <script>
+        const menuItems = document.querySelectorAll('ul li');
+        const coffeeImage = document.getElementById('coffee-image');
+
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const imageName = this.getAttribute('data-image');
+                coffeeImage.src = imageName;
+                coffeeImage.style.display = 'block';
+            });
+
+            item.addEventListener('mouseleave', function() {
+                coffeeImage.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
